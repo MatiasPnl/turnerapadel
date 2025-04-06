@@ -1,0 +1,15 @@
+Backend
+# 1. Activar entorno virtual (si usás uno)
+.\env\Scripts\activate         # En Windows
+# o
+source env/bin/activate        # En Linux/Mac
+
+# 2. Iniciar el servidor FastAPI
+uvicorn main:app --reload
+
+Fronted
+# 1. Instalar dependencias (solo la primera vez)
+npm install
+
+# 2. Iniciar la app React
+npm start
