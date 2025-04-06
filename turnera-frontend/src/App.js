@@ -8,6 +8,7 @@ import './styles/style.css';
 import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Timelapse from './components/Timelapse';
+import logo from './assets/logo1.png';
 
 function App() {
   const [fechaSeleccionada, setFechaSeleccionada] = useState(null);
@@ -57,8 +58,10 @@ function App() {
             {/* HEADER */}
             <div className="header">
               <div className="titulo-contenedor">
-                <h1 className="titulo">x4 Padel</h1>
+                <h1 className="titulo">aa</h1>
               </div>
+              <img src={logo} alt="Logo" className="logo-header" />
+
             </div>
 
             {/* ÍCONO ADMIN */}

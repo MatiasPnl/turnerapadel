@@ -6,6 +6,7 @@ source env/bin/activate        # En Linux/Mac
 
 # 2. Iniciar el servidor FastAPI
 uvicorn main:app --reload
+py -m uvicorn main:app --reload
 
 Fronted
 # 1. Instalar dependencias (solo la primera vez)

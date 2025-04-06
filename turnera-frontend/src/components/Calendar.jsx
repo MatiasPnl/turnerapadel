@@ -1,7 +1,17 @@
 import React from 'react';
 
 const Calendar = ({ turnos, seleccionarFecha, fechaSeleccionada }) => {
-  const fechasUnicas = [...new Set(turnos.map(t => t.fecha))];
+  // Obtener fecha actual en formato YYYY-MM-DD
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0); // resetear hora para comparación justa
+  const hoyISO = hoy.toISOString().split('T')[0];
+
+  // Obtener fechas únicas y filtrar por fechas >= hoy
+  const fechasUnicas = [...new Set(
+    turnos
+      .map(t => t.fecha)
+      .filter(f => f >= hoyISO)
+  )];
 
   const formatearFecha = (fechaISO) => {
     const [year, month, day] = fechaISO.split('-');
